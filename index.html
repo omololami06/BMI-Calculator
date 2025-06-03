@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Health is Wealth, Know your BMI today!</h1>
+      <div class="toggle-mode" onclick="toggleMode()">
+        <i class="fas fa-moon"></i>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="bmi-meaning">
+        <p>
+          A BMI (Body Mass Index) calculator is a tool that uses a person's
+          weight and height to estimate their body fat percentage, which can
+          help determine if they are within a healthy weight range. It's a
+          common method used by healthcare providers to assess an individual's
+          health and risk factors.
+        </p>
+      </div>
+
+      <label for="unitSelect">Select Unit:</label>
+      <select id="unitSelect" onchange="switchUnit()">
+        <option value="metric">Metric (kg, m)</option>
+        <option value="imperial">Imperial (lbs, in)</option>
+      </select>
+
+      <input type="text" id="weight" placeholder="Enter your weight" />
+      <input type="text" id="height" placeholder="Enter your height" />
+
+      <div class="button-group">
+        <button onclick="calculateBMI()">Calculate</button>
+        <button onclick="resetForm()">Reset</button>
+      </div>
+
+      <div id="result"></div>
+      <div id="tip" class="tips"></div>
+
+      <div class="bmi-info">
+        <div>
+          <h4>BMI Classification</h4>
+          <p>BMI < 18.5 → Underweight</p>
+          <p>18.5 – 24.9 → Normal weight</p>
+          <p>25 – 29.9 → Overweight</p>
+          <p>30 and above → Obese</p>
+        </div>
+
+        <div>
+          <h4>Health Implications</h4>
+          <p>
+            <strong>Underweight:</strong> May lead to nutrient deficiencies and
+            low immunity.
+          </p>
+          <p>
+            <strong>Overweight:</strong> Higher risk of heart disease, diabetes,
+            and joint issues.
+          </p>
+          <p>
+            <strong>Obese:</strong> Significantly increases health risks
+            including hypertension and stroke.
+          </p>
+        </div>
+
+        <div>
+          <h4>Disclaimer</h4>
+          <p>
+            This tool is a general guide. It may not be accurate for athletes,
+            pregnant women, or children.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script/bmi.js"></script>
+  </body>
+</html>

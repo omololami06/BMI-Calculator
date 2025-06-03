@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 20px;
+}
+
+body.dark-mode {
+  background-color: rgba(6, 4, 5, 0.88);
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #007bff;
+  color: white;
+  border-radius: 0 0 20px 20px;
+}
+
+.toggle-mode {
+  float: right;
+  cursor: pointer;
+  margin-top: -40px;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.bmi-meaning {
+  font-size: 20px;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.button-group button {
+  flex: 1;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #007bff;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: underline;
+}
+
+.tips,
+.bmi-info {
+  background: #f9fafb;
+  padding: 15px;
+  margin-top: 30px;
+  border-left: 5px solid #007bff;
+  border-radius: 10px;
+}
+
+.bmi-info div {
+  margin-top: 20px;
+}
+
+h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    max-width: 400px;
+  }
+}
